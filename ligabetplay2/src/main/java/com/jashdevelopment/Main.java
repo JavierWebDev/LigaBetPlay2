@@ -442,7 +442,7 @@ public class Main {
 
                             int opReportes = Integer.parseInt(sc.nextLine().trim());
 
-                            switch (menuReportes) {
+                            switch (opReportes) {
                                 
                                 // Reportes partidos
                                 case 1 -> {
@@ -501,6 +501,7 @@ public class Main {
                                             sc.nextLine();
                                         }
                                 }
+                            }
 
                                 // Reportes Jugadores
                                 case 2 -> {
