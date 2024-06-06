@@ -1,7 +1,7 @@
 package com.jashdevelopment.model;
 
 public class Equipo {
-    String nombreEquipo;
+    public String nombreEquipo;
     int equipoID = 0;
     int partidosJugados = 0;
     int partidosGanados = 0;
