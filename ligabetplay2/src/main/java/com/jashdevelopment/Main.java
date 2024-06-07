@@ -36,6 +36,12 @@ public class Main {
         }
     }
 
+    public static void listarJugadores(ArrayList<Jugador> jugadores) {
+        for (Jugador player : jugadores) {
+            System.out.println(player.getNombreJugador());
+        }
+    }
+
     public static void menuPrincipal() {
         limpiarConsola();
 
@@ -430,12 +436,11 @@ public class Main {
 
                     // REPORTES
                     case 3 -> {
-                        limpiarConsola();
-
                         boolean isActiveReportMenu = true;
                         ArrayList<String> menuReportes = new ArrayList<>(Arrays.asList("Reportes Partidos", "Reportes Jugadores", "Salir"));
 
                         while (isActiveReportMenu) {
+                            limpiarConsola();
                             System.out.println("********** MENU REPORTES **********");
 
                             listarOpc(menuReportes);
@@ -505,7 +510,12 @@ public class Main {
 
                                 // Reportes Jugadores
                                 case 2 -> {
-                                    
+                                    limpiarConsola();
+                                    System.out.println("********** REPORTES JUGADORES **********");
+
+                                    listarJugadores(jugadores);
+
+                                    sc.nextLine();
                                 }
 
                                 default -> {
